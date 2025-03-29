@@ -1,0 +1,304 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+h1, h2, h3, h4 {
+    color: #2c3e50;
+}
+
+.tabs {
+    overflow: hidden;
+    border: 1px solid #3498db;
+    background-color: #3498db;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.tabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: 0.3s;
+    font-size: 16px;
+    color: white;
+}
+
+.tabs button:hover {
+    background-color: #2980b9;
+}
+
+.tabs button.active {
+    background-color: #2980b9;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el formulario */
+form {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #34495e;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #ecf0f1;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #219653;
+}
+
+/* Estilos para tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+.libro-container, .balanza-container {
+    display: flex;
+    gap: 20px;
+}
+
+.debe, .haber {
+    flex: 1;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.debe h3, .haber h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Estilos para diagramas T */
+.diagramas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.diagrama {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #ecf0f1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.diagrama h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.diagrama .cuenta {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.diagrama .debe, .diagrama .haber {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.diagrama .debe {
+    background-color: #e6f7ff;
+}
+
+.diagrama .haber {
+    background-color: #f0ffe6;
+}
+
+.diagrama .debe h4, .diagrama .haber h4 {
+    margin-top: 0;
+    color: #34495e;
+}
+
+/* Estilos para Balanza de Comprobación */
+.totales-balanza {
+    margin-top: 20px;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Estilos para Estado de Resultados */
+.estado-resultados {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.estado-resultados th {
+    background-color: #3498db;
+}
+
+.estado-resultados tr.subtotal td {
+    font-weight: bold;
+    border-top: 2px solid #3498db;
+}
+
+.estado-resultados tr.total td {
+    font-weight: bold;
+    background-color: #f1c40f;
+}
+
+/* Estilos para Balance General */
+.balance-general-container {
+    display: flex;
+    gap: 30px;
+}
+
+.activos, .pasivos-patrimonio {
+    flex: 1;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.pasivos-patrimonio table {
+    margin-bottom: 15px;
+}
+
+.total {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Estilos para Estado de Cambios en el Capital */
+.cambios-capital-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.cambios-capital-table th, 
+.cambios-capital-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: right;
+}
+
+.cambios-capital-table th {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+}
+
+.cambios-capital-table tr.seccion td {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+}
+
+.cambios-capital-table tr.total-seccion td {
+    background-color: #e6f7ff;
+    font-weight: bold;
+}
+
+.cambios-capital-table tr.total-final td {
+    background-color: #f1c40f;
+    font-weight: bold;
+}
+
+.cambios-capital-table td:first-child {
+    text-align: left;
+}
+
+/* Estilos para Estado de Flujo de Efectivo */
+.flujo-efectivo-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.flujo-efectivo-table th, 
+.flujo-efectivo-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.flujo-efectivo-table th {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+}
+
+.flujo-efectivo-table td {
+    text-align: right;
+}
+
+.flujo-efectivo-table td:first-child {
+    text-align: left;
+}
+
+.flujo-efectivo-table tr.seccion td {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.flujo-efectivo-table tr.total-seccion td {
+    background-color: #e6f7ff;
+    font-weight: bold;
+}
+
+.flujo-efectivo-table tr.total-final td {
+    background-color: #f1c40f;
+    font-weight: bold;
+}
